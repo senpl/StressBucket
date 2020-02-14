@@ -163,6 +163,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="6dp"
+        android:progressTint="@color/warnRed"
         app:layout_constraintBottom_toTopOf="@+id/seekBarNegative2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -219,6 +220,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="212dp"
+        android:progressTint="@color/warnRed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/seekBarPositive2"
         app:layout_constraintTop_toTopOf="parent" />
@@ -230,6 +232,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="144dp"
+        android:progressTint="@color/warnRed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/seekBarPositive1"
         app:layout_constraintTop_toTopOf="parent" />
@@ -251,6 +254,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="284dp"
+        android:progressTint="@color/warnRed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/seekBarPositive3"
         app:layout_constraintTop_toTopOf="parent" />
@@ -262,6 +266,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
         android:layout_marginTop="440dp"
+        android:progressTint="@color/warnRed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/seekBarPositive5"
         app:layout_constraintTop_toTopOf="parent" />
@@ -301,6 +306,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
         android:layout_marginTop="360dp"
+        android:progressTint="@color/warnRed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/seekBarPositive4"
         app:layout_constraintTop_toTopOf="parent" />
