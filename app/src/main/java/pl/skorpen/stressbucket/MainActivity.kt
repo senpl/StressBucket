@@ -220,7 +220,7 @@ class MainActivity : AppCompatActivity() {
                 updateCounter()
             }
         }
-        Counter.text=calculateSumOfBuckets().toString()
+        updateCounter()
     }
 
     private fun updateCounter(){
