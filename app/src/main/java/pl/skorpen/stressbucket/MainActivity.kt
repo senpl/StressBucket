@@ -1,6 +1,7 @@
 package pl.skorpen.stressbucket
 
 import android.content.Context
+import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.view.View.OnFocusChangeListener
@@ -8,6 +9,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -85,6 +87,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onStartTrackingTouch(seekBar: SeekBar) {}
                 override fun onStopTrackingTouch(seekBar: SeekBar) {
                     saveIntToPreference("positiveSeek1", progress)
+                    updateCounter()
                 }
             })
         }
@@ -95,6 +98,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onStartTrackingTouch(seekBar: SeekBar) {}
                 override fun onStopTrackingTouch(seekBar: SeekBar) {
                     saveIntToPreference("positiveSeek2", progress)
+                    updateCounter()
                 }
             })
         }
@@ -105,6 +109,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onStartTrackingTouch(seekBar: SeekBar) {}
                 override fun onStopTrackingTouch(seekBar: SeekBar) {
                     saveIntToPreference("positiveSeek3", progress)
+                    updateCounter()
                 }
             })
         }
@@ -115,6 +120,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onStartTrackingTouch(seekBar: SeekBar) {}
                 override fun onStopTrackingTouch(seekBar: SeekBar) {
                     saveIntToPreference("positiveSeek4", progress)
+                    updateCounter()
                 }
             })
         }
@@ -125,6 +131,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onStartTrackingTouch(seekBar: SeekBar) {}
                 override fun onStopTrackingTouch(seekBar: SeekBar) {
                     saveIntToPreference("positiveSeek5", progress)
+                    updateCounter()
                 }
             })
         }
@@ -135,6 +142,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onStartTrackingTouch(seekBar: SeekBar) {}
                 override fun onStopTrackingTouch(seekBar: SeekBar) {
                     saveIntToPreference("negativeSeek1", progress)
+                    updateCounter()
                 }
             })
         }
@@ -145,6 +153,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onStartTrackingTouch(seekBar: SeekBar) {}
                 override fun onStopTrackingTouch(seekBar: SeekBar) {
                     saveIntToPreference("negativeSeek2", progress)
+                    updateCounter()
                 }
             })
         }
@@ -155,6 +164,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onStartTrackingTouch(seekBar: SeekBar) {}
                 override fun onStopTrackingTouch(seekBar: SeekBar) {
                     saveIntToPreference("negativeSeek3", progress)
+                    updateCounter()
                 }
             })
         }
@@ -165,6 +175,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onStartTrackingTouch(seekBar: SeekBar) {}
                 override fun onStopTrackingTouch(seekBar: SeekBar) {
                     saveIntToPreference("negativeSeek4", progress)
+                    updateCounter()
                 }
             })
         }
@@ -175,6 +186,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onStartTrackingTouch(seekBar: SeekBar) {}
                 override fun onStopTrackingTouch(seekBar: SeekBar) {
                     saveIntToPreference("negativeSeek5", progress)
+                    updateCounter()
                 }
             })
         }
@@ -190,6 +202,7 @@ class MainActivity : AppCompatActivity() {
                 seekBarPositive3.progress = 0
                 seekBarPositive4.progress = 0
                 seekBarPositive5.progress = 0
+                updateCounter()
             }
         }
         findViewById<Button>(R.id.resetSeekbarsNegative).apply {
@@ -204,9 +217,23 @@ class MainActivity : AppCompatActivity() {
                 seekBarNegative3.progress = 0
                 seekBarNegative4.progress = 0
                 seekBarNegative5.progress = 0
+                updateCounter()
             }
         }
+        Counter.text=calculateSumOfBuckets().toString()
     }
+
+    private fun updateCounter(){
+        val sumOfBuckets=calculateSumOfBuckets()
+        Counter.text=sumOfBuckets.toString()
+        if(sumOfBuckets<0)
+            Counter.setTextColor(Color.RED)
+        else{
+            Counter.setTextColor(Color.BLACK)
+        }
+    }
+    private fun calculateSumOfBuckets(): Int =
+        getIntValue("positiveSeek1")+getIntValue("positiveSeek2")+getIntValue("positiveSeek3")+getIntValue("positiveSeek4")+getIntValue("positiveSeek5")-getIntValue("negativeSeek1")-getIntValue("negativeSeek2")-getIntValue("negativeSeek3")-getIntValue("negativeSeek4")-getIntValue("negativeSeek5")
 
     private fun getValue(propKey: String): String? {
         val sharedPref = getPreferences(Context.MODE_PRIVATE)
