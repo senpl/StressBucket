@@ -7,319 +7,387 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <!--    <com.warkiz.widget.IndicatorSeekBar-->
+<!--        android:layout_width="351dp"-->
+<!--        android:layout_height="103dp"-->
+<!--        app:isb_indicator_color="@color/color_gray"-->
+<!--        app:isb_indicator_text_color="@color/colorAccent"-->
+<!--        app:isb_indicator_text_size="18sp"-->
+<!--        app:isb_max="100"-->
+<!--        app:isb_min="0"-->
+<!--        app:isb_only_thumb_draggable="true"-->
+<!--        app:isb_seek_smoothly="true"-->
+<!--        app:isb_show_indicator="rounded_rectangle"-->
+<!--        app:isb_show_tick_marks_type="oval"-->
+<!--        app:isb_show_tick_texts="true"-->
+<!--        app:isb_thumb_color="@color/color_green"-->
+<!--        app:isb_thumb_size="20dp"-->
+<!--        app:isb_tick_marks_drawable="@mipmap/ic_launcher"-->
+<!--        app:isb_tick_marks_size="13dp"-->
+<!--        app:isb_tick_texts_color="@color/color_blue"-->
+<!--        app:isb_tick_texts_size="15sp"-->
+<!--        app:isb_ticks_count="5"-->
+<!--        app:isb_track_background_color="@color/color_gray"-->
+<!--        app:isb_track_background_size="2dp"-->
+<!--        app:isb_track_progress_color="@color/color_blue"-->
+<!--        app:isb_track_progress_size="4dp"-->
+<!--        tools:layout_editor_absoluteX="4dp"-->
+<!--        tools:layout_editor_absoluteY="43dp" />-->
+
     <TextView
         android:id="@+id/Counter"
-        android:layout_width="32dp"
-        android:layout_height="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/resetSeekbarsPositive"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="37dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/resetSeekbarsPositive"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/resetSeekbarsPositive"
         android:layout_width="32dp"
         android:layout_height="36dp"
-        android:layout_marginStart="152dp"
-        android:layout_marginLeft="152dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="9dp"
         android:text="+"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/positiveText"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/resetSeekbarsNegative"
         android:layout_width="32dp"
         android:layout_height="36dp"
-        android:layout_marginStart="312dp"
-        android:layout_marginLeft="312dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:text="-"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/negative5"
-        android:layout_width="155dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/seekBarNegative5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/positive5" />
+        app:layout_constraintStart_toEndOf="@+id/negativeText"
+        app:layout_constraintTop_toTopOf="@+id/resetSeekbarsPositive" />
 
     <EditText
         android:id="@+id/negative1"
-        android:layout_width="155dp"
+        android:layout_width="wrap_content"
+        android:minWidth="155dp"
         android:layout_height="41dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/seekBarNegative1"
-        app:layout_constraintStart_toEndOf="@+id/positive1" />
-
-    <EditText
-        android:id="@+id/negative4"
-        android:layout_width="155dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/seekBarNegative4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/positive4" />
-
-    <EditText
-        android:id="@+id/negative3"
-        android:layout_width="155dp"
-        android:layout_height="41dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/seekBarNegative3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/positive3"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarNegative2"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/positive5"
-        android:layout_width="155dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="7dp"
-        app:layout_constraintBottom_toTopOf="@+id/seekBarPositive5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarPositive4"
-        app:layout_constraintVertical_bias="1.0" />
-
-<!--    <pl.skorpen.stressbucket.TextThumbSeekBar-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="24dp"-->
-<!--        android:layout_marginLeft="24dp"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:max="100"-->
-<!--        android:thumb="@drawable/shape_seek_bar_text_thumb"-->
-<!--        android:thumbOffset="4dp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        />-->
-
-    <pl.skorpen.stressbucket.TextThumbSeekBar
-        android:id="@+id/seekBarPositive5"
-        android:layout_width="155dp"
-        android:layout_height="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="444dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <pl.skorpen.stressbucket.TextThumbSeekBar
-        android:id="@+id/seekBarPositive4"
-        android:layout_width="155dp"
-        android:layout_height="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="364dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/positive4"
-        android:layout_width="155dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/seekBarPositive4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarPositive3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/positive3"
-        android:layout_width="155dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/seekBarPositive3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarPositive2"
-        app:layout_constraintVertical_bias="1.0" />
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        app:layout_constraintStart_toEndOf="@+id/positive1"
+        app:layout_constraintTop_toTopOf="@+id/positive1" />
 
     <EditText
         android:id="@+id/negative2"
-        android:layout_width="155dp"
+        android:layout_width="wrap_content"
+        android:minWidth="155dp"
         android:layout_height="41dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="6dp"
         android:progressTint="@color/warnRed"
-        app:layout_constraintBottom_toTopOf="@+id/seekBarNegative2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/positive2"
-        app:layout_constraintTop_toBottomOf="@+id/seekBarNegative1"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/positive2" />
+
+    <EditText
+        android:id="@+id/negative3"
+        android:layout_width="wrap_content"
+        android:minWidth="155dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/positive3"
+        app:layout_constraintTop_toTopOf="@+id/positive3" />
+
+    <EditText
+        android:id="@+id/negative4"
+        android:layout_width="wrap_content"
+        android:minWidth="155dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/positive4"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarNegative3" />
+
+    <EditText
+        android:id="@+id/negative5"
+        android:layout_width="wrap_content"
+        android:minWidth="155dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/seekBarNegative5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/positive5"
+        app:layout_constraintTop_toTopOf="@+id/positive5" />
+
+    <EditText
+        android:id="@+id/positive1"
+        android:layout_width="155dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/resetSeekbarsPositive" />
 
     <EditText
         android:id="@+id/positive2"
         android:layout_width="155dp"
-        android:layout_height="40dp"
+        android:layout_height="41dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintBottom_toTopOf="@+id/seekBarPositive1"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/seekBarPositive2"
-        app:layout_constraintVertical_bias="0.38" />
+        app:layout_constraintTop_toBottomOf="@+id/positive1" />
 
-    <pl.skorpen.stressbucket.TextThumbSeekBar
+    <EditText
+        android:id="@+id/positive3"
+        android:layout_width="155dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarPositive2" />
+
+    <!--    THIS IN FINAL VERSION app:isb_only_thumb_draggable="true"-->
+
+    <EditText
+        android:id="@+id/positive4"
+        android:layout_width="155dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarPositive3" />
+
+    <EditText
+        android:id="@+id/positive5"
+        android:layout_width="155dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarPositive4" />
+
+    <com.warkiz.widget.IndicatorSeekBar
         android:id="@+id/seekBarPositive1"
         android:layout_width="155dp"
-        android:layout_height="16dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="4dp"
+        app:isb_indicator_color="@color/color_green"
+        app:isb_indicator_text_size="28sp"
+        app:isb_show_thumb_text="true"
+        app:isb_thumb_color="@color/color_green"
+        app:isb_thumb_text_color="@color/color_gray"
+        app:isb_track_progress_color="@color/color_green"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/positive1" />
 
-    <pl.skorpen.stressbucket.TextThumbSeekBar
+
+    <com.warkiz.widget.IndicatorSeekBar
         android:id="@+id/seekBarPositive2"
         android:layout_width="155dp"
         android:layout_height="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="4dp"
+        app:isb_indicator_color="@color/color_green"
+        app:isb_indicator_text_size="28sp"
+        app:isb_show_thumb_text="true"
+        app:isb_thumb_color="@color/color_green"
+        app:isb_thumb_text_color="@color/color_gray"
+        app:isb_track_progress_color="@color/color_green"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/positive2" />
 
-    <EditText
-        android:id="@+id/positive1"
-        android:layout_width="155dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="36dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <pl.skorpen.stressbucket.TextThumbInvertedSeekBar
-        android:id="@+id/seekBarNegative2"
-        android:layout_width="155dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="212dp"
-        android:progressTint="@color/warnRed"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/seekBarPositive2"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <pl.skorpen.stressbucket.TextThumbInvertedSeekBar
-        android:id="@+id/seekBarNegative1"
-        android:layout_width="155dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="144dp"
-        android:progressTint="@color/warnRed"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/seekBarPositive1"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <pl.skorpen.stressbucket.TextThumbSeekBar
+    <com.warkiz.widget.IndicatorSeekBar
         android:id="@+id/seekBarPositive3"
         android:layout_width="155dp"
         android:layout_height="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="284dp"
+        app:isb_indicator_color="@color/color_green"
+        app:isb_indicator_text_size="28sp"
+        app:isb_show_thumb_text="true"
+        app:isb_thumb_color="@color/color_green"
+        app:isb_thumb_text_color="@color/color_gray"
+        app:isb_track_progress_color="@color/color_green"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/positive3" />
 
-    <pl.skorpen.stressbucket.TextThumbInvertedSeekBar
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/seekBarPositive4"
+        android:layout_width="155dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:isb_indicator_color="@color/color_green"
+        app:isb_indicator_text_size="28sp"
+        app:isb_show_thumb_text="true"
+        app:isb_thumb_color="@color/color_green"
+        app:isb_thumb_text_color="@color/color_gray"
+        app:isb_track_progress_color="@color/color_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/positive4" />
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/seekBarPositive5"
+        android:layout_width="155dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="12dp"
+        app:isb_indicator_color="@color/color_green"
+        app:isb_indicator_text_size="28sp"
+        app:isb_show_thumb_text="true"
+        app:isb_thumb_color="@color/color_green"
+        app:isb_thumb_text_color="@color/color_gray"
+        app:isb_track_progress_color="@color/color_green"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/positive5" />
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/seekBarNegative1"
+        android:layout_width="155dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:progressTint="@color/warnRed"
+        android:rotation="180"
+        app:isb_indicator_color="@color/color_red"
+        app:isb_indicator_text_size="28sp"
+        app:isb_thumb_color="@color/color_red"
+        app:isb_thumb_text_color="@color/color_gray"
+        app:isb_track_progress_color="@color/color_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/seekBarPositive1"
+        app:layout_constraintTop_toBottomOf="@+id/positive1" />
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/seekBarNegative2"
+        android:layout_width="155dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:progressTint="@color/warnRed"
+        android:rotation="180"
+        app:isb_indicator_color="@color/color_red"
+        app:isb_indicator_text_size="28sp"
+        app:isb_thumb_color="@color/color_red"
+        app:isb_thumb_text_color="@color/color_gray"
+        app:isb_track_progress_color="@color/color_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/seekBarPositive2"
+        app:layout_constraintTop_toBottomOf="@+id/positive2" />
+
+    <com.warkiz.widget.IndicatorSeekBar
         android:id="@+id/seekBarNegative3"
         android:layout_width="155dp"
         android:layout_height="21dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="284dp"
         android:progressTint="@color/warnRed"
+        android:rotation="180"
+        app:isb_indicator_color="@color/color_red"
+        app:isb_indicator_text_size="28sp"
+        app:isb_thumb_color="@color/color_red"
+        app:isb_thumb_text_color="@color/color_gray"
+        app:isb_track_progress_color="@color/color_red"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/seekBarPositive3"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/positive3" />
 
-    <pl.skorpen.stressbucket.TextThumbInvertedSeekBar
-        android:id="@+id/seekBarNegative5"
-        android:layout_width="155dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="440dp"
-        android:progressTint="@color/warnRed"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/seekBarPositive5"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="152dp"
-        android:layout_marginRight="152dp"
-        android:text="Positive"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="224dp"
-        android:layout_marginLeft="224dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginRight="41dp"
-        android:layout_marginBottom="28dp"
-        android:text="Negative"
-        app:layout_constraintBottom_toTopOf="@+id/negative1"
-        app:layout_constraintEnd_toStartOf="@+id/resetSeekbarsNegative"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <pl.skorpen.stressbucket.TextThumbInvertedSeekBar
+    <com.warkiz.widget.IndicatorSeekBar
         android:id="@+id/seekBarNegative4"
         android:layout_width="155dp"
         android:layout_height="21dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="360dp"
         android:progressTint="@color/warnRed"
+        android:rotation="180"
+        app:isb_indicator_color="@color/color_red"
+        app:isb_indicator_text_size="28sp"
+        app:isb_thumb_color="@color/color_red"
+        app:isb_thumb_text_color="@color/color_gray"
+        app:isb_track_progress_color="@color/color_red"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/seekBarPositive4"
+        app:layout_constraintTop_toTopOf="@+id/seekBarPositive4" />
+
+    <com.warkiz.widget.IndicatorSeekBar
+        android:id="@+id/seekBarNegative5"
+        android:layout_width="155dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:progressTint="@color/warnRed"
+        android:rotation="180"
+        app:isb_indicator_color="@color/color_red"
+        app:isb_indicator_text_size="28sp"
+        app:isb_thumb_color="@color/color_red"
+        app:isb_thumb_text_color="@color/color_gray"
+        app:isb_track_progress_color="@color/color_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/seekBarPositive5"
+        app:layout_constraintTop_toTopOf="@+id/seekBarPositive5" />
+
+
+    <TextView
+        android:id="@+id/positiveText"
+        android:layout_width="67dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="20dp"
+        android:text="Positive"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/negativeText"
+        android:layout_width="65dp"
+        android:layout_height="21dp"
+
+        android:layout_marginStart="48dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:text="Negative"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Counter"
+        app:layout_constraintTop_toTopOf="@+id/positiveText" />
 
     <View
         android:id="@+id/divider"
         android:layout_width="409dp"
         android:layout_height="1dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginTop="17dp"
+        android:layout_marginBottom="8dp"
         android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/positive1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/Counter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
