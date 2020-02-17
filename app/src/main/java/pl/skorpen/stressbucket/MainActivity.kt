@@ -3,13 +3,11 @@ package pl.skorpen.stressbucket
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.View.OnFocusChangeListener
 import android.widget.Button
 import android.widget.EditText
-import android.widget.SeekBar
-import android.widget.Toast
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import com.warkiz.widget.IndicatorSeekBar
 import com.warkiz.widget.OnSeekChangeListener
@@ -26,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         textView.onFocusChangeListener= OnFocusChangeListener { _ , hasFocus ->
             if (!hasFocus) { //SAVE THE DATA
                 saveToPreference("positive1", textView.text.toString())
-//                Toast.makeText(this, "TEXT contains" +textView.text, Toast.LENGTH_SHORT).show()
             }
         }
         findViewById<EditText>(R.id.positive2).apply {setText(getValue("positive2"))
@@ -96,14 +93,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-//        seekBarPositive1.onSeekChangeListener(object : SeekBar.OnSeekBarChangeListener {
-//            override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {}
-//            override fun onStartTrackingTouch(seekBar: SeekBar) {}
-//            override fun onStopTrackingTouch(seekBar: SeekBar) {
-//                saveIntToPreference("positiveSeek2", progress)
-//                updateCounter()
-//            }
-//        })
         val seekBarPositive2 = findViewById<IndicatorSeekBar>(R.id.seekBarPositive2).apply {
             setProgress((getIntValue("positiveSeek2").toFloat()))
             onSeekChangeListener = object: OnSeekChangeListener {
@@ -203,7 +192,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        findViewById<Button>(R.id.resetSeekBarsPositive).apply {
+        findViewById<ImageButton>(R.id.resetSeekBarsPositive).apply {
             setOnClickListener {
                 saveIntToPreference("positiveSeek1", 0)
                 saveIntToPreference("positiveSeek2", 0)
@@ -218,7 +207,7 @@ class MainActivity : AppCompatActivity() {
                 updateCounter()
             }
         }
-        findViewById<Button>(R.id.resetSeekBarsNegative).apply {
+        findViewById<ImageButton>(R.id.resetSeekBarsNegative).apply {
             setOnClickListener {
                 saveIntToPreference("negativeSeek1", 0)
                 saveIntToPreference("negativeSeek2", 0)
