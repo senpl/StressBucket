@@ -203,7 +203,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        findViewById<Button>(R.id.resetSeekbarsPositive).apply {
+        findViewById<Button>(R.id.resetSeekBarsPositive).apply {
             setOnClickListener {
                 saveIntToPreference("positiveSeek1", 0)
                 saveIntToPreference("positiveSeek2", 0)
@@ -218,7 +218,7 @@ class MainActivity : AppCompatActivity() {
                 updateCounter()
             }
         }
-        findViewById<Button>(R.id.resetSeekbarsNegative).apply {
+        findViewById<Button>(R.id.resetSeekBarsNegative).apply {
             setOnClickListener {
                 saveIntToPreference("negativeSeek1", 0)
                 saveIntToPreference("negativeSeek2", 0)

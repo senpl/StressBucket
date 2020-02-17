@@ -14,11 +14,11 @@
         android:layout_marginStart="56dp"
         android:layout_marginLeft="56dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintStart_toEndOf="@+id/resetSeekbarsPositive"
+        app:layout_constraintStart_toEndOf="@+id/resetSeekBarsPositive"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/resetSeekbarsPositive"
+        android:id="@+id/resetSeekBarsPositive"
         android:layout_width="32dp"
         android:layout_height="36dp"
         android:layout_marginStart="16dp"
@@ -29,7 +29,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/resetSeekbarsNegative"
+        android:id="@+id/resetSeekBarsNegative"
         android:layout_width="32dp"
         android:layout_height="36dp"
         android:layout_marginStart="8dp"
@@ -40,68 +40,60 @@
         android:text="-"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/negativeText"
-        app:layout_constraintTop_toTopOf="@+id/resetSeekbarsPositive" />
+        app:layout_constraintTop_toTopOf="@+id/resetSeekBarsPositive" />
 
     <EditText
         android:id="@+id/negative1"
         android:layout_width="wrap_content"
-        android:minWidth="155dp"
         android:layout_height="41dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        app:layout_constraintStart_toEndOf="@+id/positive1"
+        android:minWidth="155dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/positive1" />
 
     <EditText
         android:id="@+id/negative2"
         android:layout_width="wrap_content"
-        android:minWidth="155dp"
         android:layout_height="41dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:minWidth="155dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginEnd="16dp"
         android:progressTint="@color/warnRed"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/positive2"
         app:layout_constraintTop_toTopOf="@+id/positive2" />
 
     <EditText
         android:id="@+id/negative3"
         android:layout_width="wrap_content"
-        android:minWidth="155dp"
         android:layout_height="41dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:minWidth="155dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/positive3"
         app:layout_constraintTop_toTopOf="@+id/positive3" />
 
     <EditText
         android:id="@+id/negative4"
         android:layout_width="wrap_content"
-        android:minWidth="155dp"
         android:layout_height="41dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
         android:layout_marginTop="16dp"
+        android:minWidth="155dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/positive4"
         app:layout_constraintTop_toBottomOf="@+id/seekBarNegative3" />
 
     <EditText
         android:id="@+id/negative5"
         android:layout_width="wrap_content"
-        android:minWidth="155dp"
         android:layout_height="41dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
         android:layout_marginBottom="12dp"
+        android:minWidth="155dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toTopOf="@+id/seekBarNegative5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/positive5"
         app:layout_constraintTop_toTopOf="@+id/positive5" />
 
     <EditText
@@ -112,7 +104,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resetSeekbarsPositive" />
+        app:layout_constraintTop_toBottomOf="@+id/resetSeekBarsPositive" />
 
     <EditText
         android:id="@+id/positive2"
@@ -238,8 +230,8 @@
         android:id="@+id/seekBarNegative1"
         android:layout_width="155dp"
         android:layout_height="21dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="1dp"
         android:progressTint="@color/warnRed"
         android:rotation="180"
         app:isb_indicator_color="@color/color_red"
@@ -248,16 +240,14 @@
         app:isb_thumb_text_color="@color/color_gray"
         app:isb_track_progress_color="@color/color_red"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/seekBarPositive1"
-        app:layout_constraintTop_toBottomOf="@+id/positive1" />
+        app:layout_constraintTop_toTopOf="@+id/seekBarPositive1" />
 
     <com.warkiz.widget.IndicatorSeekBar
         android:id="@+id/seekBarNegative2"
         android:layout_width="155dp"
         android:layout_height="21dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="1dp"
         android:progressTint="@color/warnRed"
         android:rotation="180"
         app:isb_indicator_color="@color/color_red"
@@ -266,16 +256,14 @@
         app:isb_thumb_text_color="@color/color_gray"
         app:isb_track_progress_color="@color/color_red"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/seekBarPositive2"
-        app:layout_constraintTop_toBottomOf="@+id/positive2" />
+        app:layout_constraintTop_toTopOf="@+id/seekBarPositive2" />
 
     <com.warkiz.widget.IndicatorSeekBar
         android:id="@+id/seekBarNegative3"
         android:layout_width="155dp"
         android:layout_height="21dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="1dp"
         android:progressTint="@color/warnRed"
         android:rotation="180"
         app:isb_indicator_color="@color/color_red"
@@ -284,16 +272,14 @@
         app:isb_thumb_text_color="@color/color_gray"
         app:isb_track_progress_color="@color/color_red"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/seekBarPositive3"
-        app:layout_constraintTop_toBottomOf="@+id/positive3" />
+        app:layout_constraintTop_toTopOf="@+id/seekBarPositive3" />
 
     <com.warkiz.widget.IndicatorSeekBar
         android:id="@+id/seekBarNegative4"
         android:layout_width="155dp"
         android:layout_height="21dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="1dp"
         android:progressTint="@color/warnRed"
         android:rotation="180"
         app:isb_indicator_color="@color/color_red"
@@ -302,17 +288,15 @@
         app:isb_thumb_text_color="@color/color_gray"
         app:isb_track_progress_color="@color/color_red"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/seekBarPositive4"
         app:layout_constraintTop_toTopOf="@+id/seekBarPositive4" />
 
     <com.warkiz.widget.IndicatorSeekBar
         android:id="@+id/seekBarNegative5"
         android:layout_width="155dp"
         android:layout_height="21dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
         android:progressTint="@color/warnRed"
+        android:layout_marginRight="1dp"
+        android:layout_marginEnd="16dp"
         android:rotation="180"
         app:isb_indicator_color="@color/color_red"
         app:isb_indicator_text_size="28sp"
@@ -320,8 +304,6 @@
         app:isb_thumb_text_color="@color/color_gray"
         app:isb_track_progress_color="@color/color_red"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/seekBarPositive5"
         app:layout_constraintTop_toTopOf="@+id/seekBarPositive5" />
 
 
