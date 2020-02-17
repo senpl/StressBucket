@@ -86,24 +86,15 @@ class MainActivity : AppCompatActivity() {
             }
         }}
         val seekBarPositive1 = findViewById<IndicatorSeekBar>(R.id.seekBarPositive1).apply{
-        setProgress((getIntValue("positiveSeek1").toFloat()))
-//            onSeekChangeListener =(object : OnSeekBarChangeListener {
-//                override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {}
-//                override fun onStartTrackingTouch(seekBar: SeekBar) {}
-//                override fun onStopTrackingTouch(seekBar: SeekBar) {
-//                    saveIntToPreference("positiveSeek2", progress)
-//                    updateCounter()
-//                }
-//            }))
-        onSeekChangeListener = object: OnSeekChangeListener {
+            setProgress((getIntValue("positiveSeek1").toFloat()))
+            onSeekChangeListener = object: OnSeekChangeListener {
             override fun onSeeking(seekParams:SeekParams) {}
             override fun onStartTrackingTouch(seekBar:IndicatorSeekBar) {}
             override fun onStopTrackingTouch(seekBar:IndicatorSeekBar) {
-                Toast.makeText(context,"Touch end" , Toast.LENGTH_LONG)
                 saveIntToPreference("positiveSeek1",seekBar.progress)
                 updateCounter()
+                }
             }
-        }
         }
 //        seekBarPositive1.onSeekChangeListener(object : SeekBar.OnSeekBarChangeListener {
 //            override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {}
@@ -113,104 +104,104 @@ class MainActivity : AppCompatActivity() {
 //                updateCounter()
 //            }
 //        })
-        val seekBarPositive2 = findViewById<SeekBar>(R.id.seekBarPositive2).apply {
-            progress = getIntValue("positiveSeek2")
-            setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-                override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {}
-                override fun onStartTrackingTouch(seekBar: SeekBar) {}
-                override fun onStopTrackingTouch(seekBar: SeekBar) {
-                    saveIntToPreference("positiveSeek2", progress)
+        val seekBarPositive2 = findViewById<IndicatorSeekBar>(R.id.seekBarPositive2).apply {
+            setProgress((getIntValue("positiveSeek2").toFloat()))
+            onSeekChangeListener = object: OnSeekChangeListener {
+                override fun onSeeking(seekParams:SeekParams) {}
+                override fun onStartTrackingTouch(seekBar:IndicatorSeekBar) {}
+                override fun onStopTrackingTouch(seekBar:IndicatorSeekBar) {
+                    saveIntToPreference("positiveSeek2",seekBar.progress)
                     updateCounter()
                 }
-            })
+            }
         }
-        val seekBarPositive3 = findViewById<SeekBar>(R.id.seekBarPositive3).apply {
-            progress = getIntValue("positiveSeek3")
-            setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-                override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {}
-                override fun onStartTrackingTouch(seekBar: SeekBar) {}
-                override fun onStopTrackingTouch(seekBar: SeekBar) {
-                    saveIntToPreference("positiveSeek3", progress)
+        val seekBarPositive3 = findViewById<IndicatorSeekBar>(R.id.seekBarPositive3).apply {
+            setProgress((getIntValue("positiveSeek3").toFloat()))
+            onSeekChangeListener = object: OnSeekChangeListener {
+                override fun onSeeking(seekParams:SeekParams) {}
+                override fun onStartTrackingTouch(seekBar:IndicatorSeekBar) {}
+                override fun onStopTrackingTouch(seekBar:IndicatorSeekBar) {
+                    saveIntToPreference("positiveSeek3",seekBar.progress)
                     updateCounter()
                 }
-            })
+            }
         }
-        val seekBarPositive4 = findViewById<SeekBar>(R.id.seekBarPositive4).apply {
-            progress = getIntValue("positiveSeek4")
-            setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-                override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {}
-                override fun onStartTrackingTouch(seekBar: SeekBar) {}
-                override fun onStopTrackingTouch(seekBar: SeekBar) {
-                    saveIntToPreference("positiveSeek4", progress)
+        val seekBarPositive4 = findViewById<IndicatorSeekBar>(R.id.seekBarPositive4).apply {
+            setProgress((getIntValue("positiveSeek4").toFloat()))
+            onSeekChangeListener = object: OnSeekChangeListener {
+                override fun onSeeking(seekParams:SeekParams) {}
+                override fun onStartTrackingTouch(seekBar:IndicatorSeekBar) {}
+                override fun onStopTrackingTouch(seekBar:IndicatorSeekBar) {
+                    saveIntToPreference("positiveSeek4",seekBar.progress)
                     updateCounter()
                 }
-            })
+            }
         }
-        val seekBarPositive5 = findViewById<SeekBar>(R.id.seekBarPositive5).apply {
-            progress = getIntValue("positiveSeek5")
-            setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-                override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {}
-                override fun onStartTrackingTouch(seekBar: SeekBar) {}
-                override fun onStopTrackingTouch(seekBar: SeekBar) {
-                    saveIntToPreference("positiveSeek5", progress)
+        val seekBarPositive5 = findViewById<IndicatorSeekBar>(R.id.seekBarPositive5).apply {
+            setProgress((getIntValue("positiveSeek5").toFloat()))
+            onSeekChangeListener = object: OnSeekChangeListener {
+                override fun onSeeking(seekParams:SeekParams) {}
+                override fun onStartTrackingTouch(seekBar:IndicatorSeekBar) {}
+                override fun onStopTrackingTouch(seekBar:IndicatorSeekBar) {
+                    saveIntToPreference("positiveSeek5",seekBar.progress)
                     updateCounter()
                 }
-            })
+            }
         }
-        val seekBarNegative1 = findViewById<SeekBar>(R.id.seekBarNegative1).apply {
-            progress = getIntValue("negativeSeek1")
-            setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-                override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {}
-                override fun onStartTrackingTouch(seekBar: SeekBar) {}
-                override fun onStopTrackingTouch(seekBar: SeekBar) {
-                    saveIntToPreference("negativeSeek1", progress)
+        val seekBarNegative1 = findViewById<IndicatorSeekBar>(R.id.seekBarNegative1).apply {
+            setProgress((getIntValue("negativeSeek1").toFloat()))
+            onSeekChangeListener = object: OnSeekChangeListener {
+                override fun onSeeking(seekParams:SeekParams) {}
+                override fun onStartTrackingTouch(seekBar:IndicatorSeekBar) {}
+                override fun onStopTrackingTouch(seekBar:IndicatorSeekBar) {
+                    saveIntToPreference("negativeSeek1",seekBar.progress)
                     updateCounter()
                 }
-            })
+            }
         }
-        val seekBarNegative2 = findViewById<SeekBar>(R.id.seekBarNegative2).apply {
-            progress = getIntValue("negativeSeek2")
-            setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-                override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {}
-                override fun onStartTrackingTouch(seekBar: SeekBar) {}
-                override fun onStopTrackingTouch(seekBar: SeekBar) {
-                    saveIntToPreference("negativeSeek2", progress)
+        val seekBarNegative2 = findViewById<IndicatorSeekBar>(R.id.seekBarNegative2).apply {
+            setProgress((getIntValue("negativeSeek2").toFloat()))
+            onSeekChangeListener = object: OnSeekChangeListener {
+                override fun onSeeking(seekParams:SeekParams) {}
+                override fun onStartTrackingTouch(seekBar:IndicatorSeekBar) {}
+                override fun onStopTrackingTouch(seekBar:IndicatorSeekBar) {
+                    saveIntToPreference("negativeSeek2",seekBar.progress)
                     updateCounter()
                 }
-            })
+            }
         }
-        val seekBarNegative3 = findViewById<SeekBar>(R.id.seekBarNegative3).apply {
-            progress = getIntValue("negativeSeek3")
-            setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-                override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {}
-                override fun onStartTrackingTouch(seekBar: SeekBar) {}
-                override fun onStopTrackingTouch(seekBar: SeekBar) {
-                    saveIntToPreference("negativeSeek3", progress)
+        val seekBarNegative3 = findViewById<IndicatorSeekBar>(R.id.seekBarNegative3).apply {
+            setProgress((getIntValue("negativeSeek3").toFloat()))
+            onSeekChangeListener = object: OnSeekChangeListener {
+                override fun onSeeking(seekParams:SeekParams) {}
+                override fun onStartTrackingTouch(seekBar:IndicatorSeekBar) {}
+                override fun onStopTrackingTouch(seekBar:IndicatorSeekBar) {
+                    saveIntToPreference("negativeSeek3",seekBar.progress)
                     updateCounter()
                 }
-            })
+            }
         }
-        val seekBarNegative4 = findViewById<SeekBar>(R.id.seekBarNegative4).apply {
-            progress = getIntValue("negativeSeek4")
-            setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-                override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {}
-                override fun onStartTrackingTouch(seekBar: SeekBar) {}
-                override fun onStopTrackingTouch(seekBar: SeekBar) {
-                    saveIntToPreference("negativeSeek4", progress)
+        val seekBarNegative4 = findViewById<IndicatorSeekBar>(R.id.seekBarNegative4).apply {
+            setProgress((getIntValue("negativeSeek4").toFloat()))
+            onSeekChangeListener = object: OnSeekChangeListener {
+                override fun onSeeking(seekParams:SeekParams) {}
+                override fun onStartTrackingTouch(seekBar:IndicatorSeekBar) {}
+                override fun onStopTrackingTouch(seekBar:IndicatorSeekBar) {
+                    saveIntToPreference("negativeSeek4",seekBar.progress)
                     updateCounter()
                 }
-            })
+            }
         }
-        val seekBarNegative5 = findViewById<SeekBar>(R.id.seekBarNegative5).apply {
-            progress = getIntValue("negativeSeek5")
-            setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-                override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {}
-                override fun onStartTrackingTouch(seekBar: SeekBar) {}
-                override fun onStopTrackingTouch(seekBar: SeekBar) {
-                    saveIntToPreference("negativeSeek5", progress)
+        val seekBarNegative5 = findViewById<IndicatorSeekBar>(R.id.seekBarNegative5).apply {
+            setProgress((getIntValue("negativeSeek5").toFloat()))
+            onSeekChangeListener = object: OnSeekChangeListener {
+                override fun onSeeking(seekParams:SeekParams) {}
+                override fun onStartTrackingTouch(seekBar:IndicatorSeekBar) {}
+                override fun onStopTrackingTouch(seekBar:IndicatorSeekBar) {
+                    saveIntToPreference("negativeSeek5",seekBar.progress)
                     updateCounter()
                 }
-            })
+            }
         }
         findViewById<Button>(R.id.resetSeekbarsPositive).apply {
             setOnClickListener {
@@ -220,10 +211,10 @@ class MainActivity : AppCompatActivity() {
                 saveIntToPreference("positiveSeek4", 0)
                 saveIntToPreference("positiveSeek5", 0)
                 seekBarPositive1.setProgress(0.toFloat())
-                seekBarPositive2.progress = 0
-                seekBarPositive3.progress = 0
-                seekBarPositive4.progress = 0
-                seekBarPositive5.progress = 0
+                seekBarPositive2.setProgress(0.toFloat())
+                seekBarPositive3.setProgress(0.toFloat())
+                seekBarPositive4.setProgress(0.toFloat())
+                seekBarPositive5.setProgress(0.toFloat())
                 updateCounter()
             }
         }
@@ -234,11 +225,11 @@ class MainActivity : AppCompatActivity() {
                 saveIntToPreference("negativeSeek3", 0)
                 saveIntToPreference("negativeSeek4", 0)
                 saveIntToPreference("negativeSeek5", 0)
-                seekBarNegative1.progress = 0
-                seekBarNegative2.progress = 0
-                seekBarNegative3.progress = 0
-                seekBarNegative4.progress = 0
-                seekBarNegative5.progress = 0
+                seekBarNegative1.setProgress(0.toFloat())
+                seekBarNegative2.setProgress(0.toFloat())
+                seekBarNegative3.setProgress(0.toFloat())
+                seekBarNegative4.setProgress(0.toFloat())
+                seekBarNegative5.setProgress(0.toFloat())
                 updateCounter()
             }
         }
