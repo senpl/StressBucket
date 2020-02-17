@@ -3,12 +3,17 @@ package pl.skorpen.stressbucket
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.View.OnFocusChangeListener
 import android.widget.Button
 import android.widget.EditText
 import android.widget.SeekBar
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.warkiz.widget.IndicatorSeekBar
+import com.warkiz.widget.OnSeekChangeListener
+import com.warkiz.widget.SeekParams
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -80,17 +85,34 @@ class MainActivity : AppCompatActivity() {
                 saveToPreference("negative5", text.toString())
             }
         }}
-        val seekBarPositive1 = findViewById<SeekBar>(R.id.seekBarPositive1).apply {
-            progress = getIntValue("positiveSeek1")
-            setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
-                override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {}
-                override fun onStartTrackingTouch(seekBar: SeekBar) {}
-                override fun onStopTrackingTouch(seekBar: SeekBar) {
-                    saveIntToPreference("positiveSeek1", progress)
-                    updateCounter()
-                }
-            })
+        val seekBarPositive1 = findViewById<IndicatorSeekBar>(R.id.seekBarPositive1).apply{
+        setProgress((getIntValue("positiveSeek1").toFloat()))
+//            onSeekChangeListener =(object : OnSeekBarChangeListener {
+//                override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {}
+//                override fun onStartTrackingTouch(seekBar: SeekBar) {}
+//                override fun onStopTrackingTouch(seekBar: SeekBar) {
+//                    saveIntToPreference("positiveSeek2", progress)
+//                    updateCounter()
+//                }
+//            }))
+        onSeekChangeListener = object: OnSeekChangeListener {
+            override fun onSeeking(seekParams:SeekParams) {}
+            override fun onStartTrackingTouch(seekBar:IndicatorSeekBar) {}
+            override fun onStopTrackingTouch(seekBar:IndicatorSeekBar) {
+                Toast.makeText(context,"Touch end" , Toast.LENGTH_LONG)
+                saveIntToPreference("positiveSeek1",seekBar.progress)
+                updateCounter()
+            }
         }
+        }
+//        seekBarPositive1.onSeekChangeListener(object : SeekBar.OnSeekBarChangeListener {
+//            override fun onProgressChanged(seekBar: SeekBar, i: Int, b: Boolean) {}
+//            override fun onStartTrackingTouch(seekBar: SeekBar) {}
+//            override fun onStopTrackingTouch(seekBar: SeekBar) {
+//                saveIntToPreference("positiveSeek2", progress)
+//                updateCounter()
+//            }
+//        })
         val seekBarPositive2 = findViewById<SeekBar>(R.id.seekBarPositive2).apply {
             progress = getIntValue("positiveSeek2")
             setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
@@ -197,7 +219,7 @@ class MainActivity : AppCompatActivity() {
                 saveIntToPreference("positiveSeek3", 0)
                 saveIntToPreference("positiveSeek4", 0)
                 saveIntToPreference("positiveSeek5", 0)
-                seekBarPositive1.progress = 0
+                seekBarPositive1.setProgress(0.toFloat())
                 seekBarPositive2.progress = 0
                 seekBarPositive3.progress = 0
                 seekBarPositive4.progress = 0
