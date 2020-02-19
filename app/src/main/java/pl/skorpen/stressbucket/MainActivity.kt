@@ -13,6 +13,7 @@ import com.warkiz.widget.IndicatorSeekBar
 import com.warkiz.widget.OnSeekChangeListener
 import com.warkiz.widget.SeekParams
 import kotlinx.android.synthetic.main.activity_main.*
+import pl.skorpen.stressbucket.R.id.resetSeekBarsPositive
 
 class MainActivity : AppCompatActivity() {
 
