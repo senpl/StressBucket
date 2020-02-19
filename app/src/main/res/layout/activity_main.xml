@@ -42,6 +42,8 @@
     <EditText
         android:id="@+id/negative1"
         android:layout_width="wrap_content"
+        android:textAlignment="viewEnd"
+        android:gravity="end"
         android:layout_height="41dp"
         android:minWidth="155dp"
         android:layout_marginRight="1dp"
@@ -52,6 +54,8 @@
     <EditText
         android:id="@+id/negative2"
         android:layout_width="wrap_content"
+        android:textAlignment="viewEnd"
+        android:gravity="end"
         android:layout_height="41dp"
         android:minWidth="155dp"
         android:layout_marginRight="1dp"
@@ -63,6 +67,8 @@
     <EditText
         android:id="@+id/negative3"
         android:layout_width="wrap_content"
+        android:textAlignment="viewEnd"
+        android:gravity="end"
         android:layout_height="41dp"
         android:minWidth="155dp"
         android:layout_marginRight="1dp"
@@ -73,6 +79,8 @@
     <EditText
         android:id="@+id/negative4"
         android:layout_width="wrap_content"
+        android:textAlignment="viewEnd"
+        android:gravity="end"
         android:layout_height="41dp"
         android:layout_marginTop="16dp"
         android:minWidth="155dp"
@@ -84,6 +92,8 @@
     <EditText
         android:id="@+id/negative5"
         android:layout_width="wrap_content"
+        android:textAlignment="viewEnd"
+        android:gravity="end"
         android:layout_height="41dp"
         android:layout_marginBottom="12dp"
         android:minWidth="155dp"
