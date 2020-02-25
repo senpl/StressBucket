@@ -4,7 +4,7 @@
 
 Stress Bucket Android app for managing stress with calculated value of stress influences.
 
-To check it download https://github.com/senpl/StressBucket/blob/master/app/release/app-release.aab and install on your phone, or build it yourself and download.
+To check it download https://github.com/senpl/StressBucket/blob/master/app/release/app-release.aab and install on your phone, or build it yourself and run on emulator/phone.
 
 Android app to allow stress bucket aproach to dynamically record stress influence. Based on stress buckets approach.
 
