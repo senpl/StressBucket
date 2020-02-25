@@ -6,7 +6,7 @@ Stress Bucket Android app for managing stress with calculated value of stress in
 
 Android app to allow stress bucket aproach to dynamically record stress influence. Based on stress buckets approach.
 
-App allow to write your positive negative influences, calculate their overall influence.
+App allow to write your positive and negative influences, calculate their overall influence.
 
 There are also buttons to fast reset of positive and negative values, so new day could be easly managed.
 
