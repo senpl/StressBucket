@@ -1,0 +1,3 @@
+Privacy rules for StressBucket 
+
+StressBucket doesn't access to the Web. Your personal data stay on your device.
